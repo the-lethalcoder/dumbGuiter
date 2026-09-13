@@ -2,6 +2,7 @@
 
 A client-side Progressive Web App (PWA) built with Next.js, TypeScript, and Tone.js / Web Audio API that transforms arbitrary chord progressions and chord-over-lyric text into realistic, expressive acoustic guitar playback with real-time fretboard visualization.
 
+
 ---
 
 ## 1. Architecture Overview
