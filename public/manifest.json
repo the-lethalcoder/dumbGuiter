@@ -1,0 +1,16 @@
+{
+  "name": "dumbGuiter - Chord-to-Guitar Playback",
+  "short_name": "dumbGuiter",
+  "description": "Type any chord progression, hear realistic acoustic guitar strumming",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#090d16",
+  "theme_color": "#f59e0b",
+  "icons": [
+    {
+      "src": "/icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --background: #090d16;
+    --surface: #111827;
+    --surface-hover: #1f293d;
+    --card: #131d31;
+    --card-border: rgba(255, 255, 255, 0.08);
+    --primary: #f59e0b; /* Warm Amber / Guitar Varnish */
+    --primary-glow: rgba(245, 158, 11, 0.35);
+    --accent: #38bdf8; /* Electric Cyan */
+    --text: #f8fafc;
+    --text-muted: #94a3b8;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--text);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    overflow-x: hidden;
+    min-height: 100vh;
+  }
+}
+
+/* Custom Glassmorphism */
+.glass-panel {
+  background: rgba(19, 29, 49, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--card-border);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.glass-panel-hover:hover {
+  border-color: rgba(245, 158, 11, 0.4);
+  box-shadow: 0 8px 32px 0 rgba(245, 158, 11, 0.15);
+}
+
+/* String Pluck Vibration Animation */
+@keyframes string-vibrate {
+  0%, 100% { transform: scaleY(1); }
+  25% { transform: scaleY(1.4) translateY(-1px); }
+  50% { transform: scaleY(0.7) translateY(1px); }
+  75% { transform: scaleY(1.2) translateY(-0.5px); }
+}
+
+.string-active {
+  animation: string-vibrate 0.15s ease-in-out infinite;
+  filter: drop-shadow(0 0 6px #f59e0b);
+}
+
+/* Glowing text */
+.glow-amber {
+  text-shadow: 0 0 12px rgba(245, 158, 11, 0.6);
+}
+
+.glow-cyan {
+  text-shadow: 0 0 12px rgba(56, 189, 248, 0.6);
+}
+
+/* Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #090d16;
+}
+::-webkit-scrollbar-thumb {
+  background: #27354f;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #f59e0b;
+}
